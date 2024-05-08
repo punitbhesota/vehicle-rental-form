@@ -1,20 +1,27 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors'
-import sequelize from './config/db.js';
+import initDb from './config/db.js'
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 7002;
 
 app.use(express.json());
 app.use(cors());
 
-// Start the server
-sequelize.authenticate().then(() => {
-  console.log('Database: connection established successfully');
-  app.listen(PORT, () => {
-    console.log(`Service running on port ${PORT}`);
-  });
-}).catch(err => {
-  console.error('Unable to connect to the database:', err);
-});
+async function init(){
+  try {
+      await initDb();
+
+      // Start the server
+      app.listen(PORT, () => {
+        console.log(`Service running on port ${PORT || 7002}`);
+      });
+  } catch (err) {
+      logger.error('Failed to start the service');
+      console.error(err);
+      process.exit(1);
+  }
+}
+
+init();
