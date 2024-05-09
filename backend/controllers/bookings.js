@@ -54,7 +54,9 @@ export async function createBooking(req, res) {
       endDate,
     });
 
-    res.status(201).json(newBooking);
+    console.log("Booking Made",newBooking)
+
+    res.status(201).json({message:"Vehicle Rented Successfully"});
 
   } catch (error) {
     console.error(error);
