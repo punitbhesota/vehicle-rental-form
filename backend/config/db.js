@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize(process.env.DB_CONN_URI);
+export const sequelize = new Sequelize(process.env.DB_CONN_URI);
 
 export default async function initDb() {
   try {
