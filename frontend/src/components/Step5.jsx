@@ -27,6 +27,7 @@ const Step5 = ({ onSubmit, formData }) => {
         <DatePicker
           label="Start Date"
           value={startDate}
+          disablePast
           onChange={handleStartDateChange}
           renderInput={(params) => <TextField {...params} />}
           required
@@ -34,6 +35,7 @@ const Step5 = ({ onSubmit, formData }) => {
         <DatePicker
           label="End Date"
           value={endDate}
+          disablePast
           onChange={handleEndDateChange}
           renderInput={(params) => <TextField {...params} />}
           required
