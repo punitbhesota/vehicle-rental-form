@@ -15,6 +15,7 @@ This repository contains a project for creating a form that collects user inform
 3. Since a Cloud Database is used, there's no need to set up the database manually. Simply run migrations and seed the initial data.
 4. Run migrations to set up the database schema using `npm run migrate`.
 5. Seed initial data into the database using `npm run seed`.
+6. Start the development server using `npm run dev`.
 
 ### APIs
 - **Vehicle API**: Consists of APIs such as getVehicleTypes, getVehicles etc.
