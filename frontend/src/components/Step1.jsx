@@ -19,7 +19,7 @@ const Step1 = ({ nextStep, setFormData }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-1 w-1/3">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-1 sm:w-90 md:w-1/2 lg:w-1/3">
        <div className="text-3xl font-sans ">First, What's your name ?</div>
       <TextField
         label="First Name"

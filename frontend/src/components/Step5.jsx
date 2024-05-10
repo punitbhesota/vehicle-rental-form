@@ -22,7 +22,7 @@ const Step5 = ({ onSubmit, formData }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-1/3 px-5 py-5">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:w-90 md:w-1/2 lg:w-1/3">
         <div className="text-3xl font-sans ">Finally, Pick Date Range</div>
         <DatePicker
           label="Start Date"

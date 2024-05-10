@@ -19,7 +19,7 @@ const Step2 = ({ nextStep, setFormData, formData }) => {
     
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-1/3">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:w-90 md:w-1/2 lg:w-1/3">
     <div className="text-3xl font-sans ">Two Wheeler or Four Wheeler ?</div>
         <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
